@@ -32,8 +32,8 @@ else:
 		file = sys.stdin
 
 	while True:
-		if file == sys.stdin: sys.stdout.write("> ")
-		line = file.readline()
+		if file == sys.stdin: 	line = raw_input("> ")
+		else: 					line = file.readline()
 	
 		if line == "exit":
 			break
@@ -48,4 +48,3 @@ else:
 			print device.receive()
 
 device.disconnect()
-
