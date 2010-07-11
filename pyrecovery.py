@@ -32,8 +32,7 @@ else:
 		file = sys.stdin
 
 	while True:
-		if file == sys.stdin: 	line = raw_input("> ")
-		else: 					line = file.readline()
+		line = raw_input("> ") if file == sys.stdin else file.readline()
 	
 		if line == "exit":
 			break
